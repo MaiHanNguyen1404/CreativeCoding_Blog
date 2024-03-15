@@ -12,6 +12,10 @@ First I tried to duplicate the previous code to see what will happen. The result
 
 My second attempt of making a grid was trying to duplicate the line syntax. The process was easier to understand, however too long and not sufficient. Looking back at the provided code (the code during the lecture), I noticed that there was a lot of conditionals and variables being used, which make the process more efficient and ‘clean’. Therefore, I started to look up some resources to understand better about the variables and conditionals syntax. ![grid_process](w01s01/2.png)
 
+When I tried the ‘for’ condition, it kept showing error like this. I actually spent quite some time here to figure out what’s wrong, which turn out was because I put a colon instead of a semi-colon in the ‘for’ code.
+
+I tried to make a row of square first then duplicate the code for the next lines. Then combine them all into 1 condition. After that, I also tried to change the number of rows and columns in the grid. However, it was a bit ‘handy’ having to change each number, imagine working on a much bigger sketches.
+
 
 _underline_
 
