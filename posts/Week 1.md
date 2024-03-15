@@ -1,6 +1,6 @@
 ---
-title: This is my first blog post!
-published_at: 2022-11-04T15:00:00.000Z
+title: Week 1 Blog
+published_at: 2024-03-10
 snippet: This is an excerpt of my first blog post.
 ---
 
