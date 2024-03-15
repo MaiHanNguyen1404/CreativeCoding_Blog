@@ -4,8 +4,6 @@ published_at: 2024-03-10
 snippet: This is an excerpt of my first blog post.
 ---
 
-<iframe src="https://editor.p5js.org/MaiHanNguyen1404/full/tGIAw0CS_" width="100%" ></iframe>
-
 # Homework
 
 ## Grid
