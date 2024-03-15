@@ -3,12 +3,7 @@ title: Week 1 Blog
 published_at: 2024-03-10
 snippet: This is an excerpt of my first blog post.
 ---
----
-title: Week 1 Blog
-published_at: 2024-03-10
-snippet: This blog is about the first week homework
-disable_html_sanitization: true
----
+
 <iframe src="https://editor.p5js.org/MaiHanNguyen1404/full/tGIAw0CS_" width="100%" ></iframe>
 
 # Homework
