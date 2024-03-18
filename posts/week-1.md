@@ -59,9 +59,5 @@ However, the difficult aspect of this piece for me was how to change the color o
 </p>
 
 
-_underline_
-
-**bold**
-
 
 
