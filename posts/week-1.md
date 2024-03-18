@@ -2,13 +2,20 @@
 title: Week 1 Blog
 published_at: 2024-03-10
 snippet: This is an excerpt of my first blog post.
+disable_html_sanitization: true
 ---
 
 # Homework
 
 ## Grid
 
-<iframe width=242 src="https://editor.p5js.org/MaiHanNguyen1404/full/zTj7GkpDo"></iframe>
+<iframe id="grid" src="https://editor.p5js.org/MaiHanNguyen1404/full/zTj7GkpDo"></iframe>
+
+<script type="module">
+    const iframe = document.getElementById ("risers_example")
+    iframe.width  = iframe.parentNode.clientWidth
+    iframe.height = iframe.parentNode.clientWidth + 42
+</script>
 
 First I tried to duplicate the previous code to see what will happen. The result sort of replicate a grid, however, I was not entirely understand the whole process. ![gird_process](w01s01/1.png) 
 
