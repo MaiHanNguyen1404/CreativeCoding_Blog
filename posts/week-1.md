@@ -19,7 +19,7 @@ disable_html_sanitization: true
 
 First I tried to duplicate the previous code to see what would happen. The result sort of replicated a grid, however, I did not entirely understand the whole process. ![gird_process](w01s01/1.png) 
 
-My second attempt at making a grid was trying to duplicate the line syntax. The process was easier to understand, however too long and not sufficient. Looking back at the provided code (the code during the lecture), I noticed that there were a lot of conditionals and variables being used, which made the process more efficient and ‘clean’. Therefore, I started to look up some resources to understand better the variables and conditionals syntax. ![grid_process](w01s01/2.png)
+My second attempt at making a grid was trying to duplicate the line syntax. The process was easier to understand, however too long and not sufficient. Looking back at the provided code (the code during the lecture), I noticed that there were a lot of conditionals and variables being used, which made the process more efficient and ‘clean’. Therefore, I started to look up some resources to understand better the variables, conditionals and loops syntax. ![grid_process](w01s01/2.png)
 
 When I tried the ‘for’ condition, it kept showing an error like this. I spent quite some time here to figure out what was wrong, which turned out was because I put a colon instead of a semi-colon in the ‘for’ code. ![grid_process](w01s01/error.png)
 
