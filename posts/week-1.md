@@ -53,7 +53,7 @@ From the basic understanding of the circle bouncing, I then start to create a bo
 ![onlysuddenly_process](w01s01/bounce_rectangle.png)
 
 However, the difficult aspect of this piece for me was how to change the color of each object when the circle touched the edge of the rectangle. I tried to make the color change by adding the code to the if conditions, however, the color only changed when the moment the circle touched the edge. I also tried the 'else' condition but it only changed the color the moment and the circle touched the edge. 
-<p float="center">
+<p float="left">
   <img src="/w01s01/change_color.png" width="50%" />
   <img src="/w01s01/opposite.png" width="50%" /> 
 </p>
