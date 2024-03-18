@@ -11,7 +11,7 @@ disable_html_sanitization: true
 
 <iframe id="grid" src="https://editor.p5js.org/MaiHanNguyen1404/full/zTj7GkpDo"></iframe>
 
-<script type="homework">
+<script type="module">
   const iframe = document.getElementById (`grid`)
   iframe.width  = iframe.parentNode.scrollWidth
   iframe.height = iframe.parentNode.scrollWidth + 42
