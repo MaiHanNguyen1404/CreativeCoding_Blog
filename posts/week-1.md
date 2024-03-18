@@ -1,7 +1,7 @@
 ---
 title: Week 1 Blog
 published_at: 2024-03-10
-snippet: This is an excerpt of my first blog post.
+snippet: This blog is about Week 1 Homework.
 disable_html_sanitization: true
 ---
 
