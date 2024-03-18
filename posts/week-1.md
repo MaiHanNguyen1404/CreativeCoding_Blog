@@ -15,10 +15,10 @@ My second attempt of making a grid was trying to duplicate the line syntax. The 
 When I tried the ‘for’ condition, it kept showing error like this. I actually spent quite some time here to figure out what’s wrong, which turn out was because I put a colon instead of a semi-colon in the ‘for’ code. ![grid_process](w01s01/error.png)
 
 I tried to make a row of square first then duplicate the code for the next lines. Then combine them all into 1 condition. After that, I also tried to change the number of rows and columns in the grid. However, it was a bit ‘handy’ having to change each number, imagine working on a much bigger sketches. So I applied the nested loop to make it shorter and easier to understand.
-<p float="left">
-  <img src="/w01s01/duplicate.png" width="32%" />
-  <img src="/w01s01/nested_loops.png" width="32%" /> 
-  <img src="/w01s01/naming.png" width="32%" />
+<p float="center">
+  <img src="/w01s01/duplicate.png" width="33%" />
+  <img src="/w01s01/nested_loops.png" width="33%" /> 
+  <img src="/w01s01/naming.png" width="33%" />
 </p>
 
 
