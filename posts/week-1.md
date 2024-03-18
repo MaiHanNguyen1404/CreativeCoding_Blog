@@ -9,10 +9,10 @@ disable_html_sanitization: true
 
 ## Grid
 
-<iframe id="grid" src="https://editor.p5js.org/MaiHanNguyen1404/full/zTj7GkpDo"></iframe>
+<iframe id="homework_grid" src="https://editor.p5js.org/MaiHanNguyen1404/full/zTj7GkpDo"></iframe>
 
 <script type="module">
-  const iframe = document.getElementById (`grid`)
+  const iframe = document.getElementById (`homework_grid`)
   iframe.width  = iframe.parentNode.scrollWidth
   iframe.height = iframe.parentNode.scrollWidth + 42
 </script>
