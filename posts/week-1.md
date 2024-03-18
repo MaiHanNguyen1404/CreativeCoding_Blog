@@ -30,6 +30,15 @@ I tried to make a row of square first then duplicate the code for the next lines
   <img src="/w01s01/naming.png" width="32%" />
 </p>
 
+## Rafaél Rozendaal's Only Suddenly
+
+<iframe id="homework_onlysuddenly" src="https://editor.p5js.org/MaiHanNguyen1404/full/5E5Na7L8g"></iframe>
+
+<script type="module">
+  const iframe = document.getElementById (`homework_onlysuddenly`)
+  iframe.width  = iframe.parentNode.scrollWidth
+  iframe.height = iframe.parentNode.scrollWidth + 42
+</script>
 
 
 _underline_
