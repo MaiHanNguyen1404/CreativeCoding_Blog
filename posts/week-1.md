@@ -11,8 +11,8 @@ disable_html_sanitization: true
 
 <iframe id="grid" src="https://editor.p5js.org/MaiHanNguyen1404/full/zTj7GkpDo"></iframe>
 
-<script type="module">
-    const iframe = document.getElementById ("risers_example")
+<script type="homework">
+    const iframe = document.getElementById ("grid")
     iframe.width  = iframe.parentNode.clientWidth
     iframe.height = iframe.parentNode.clientWidth + 42
 </script>
