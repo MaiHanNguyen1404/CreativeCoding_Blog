@@ -23,7 +23,15 @@ The next error was it could not access 'faller' before initialization. I think i
 
 In addition to the error, I put in the function that does not belong to the 'faller', therefore, it always shows that rand_col is not defined. ![refactor_process](w02/function_error.png)
 
-I had many trials and failures after that, it was not until the next class session that I could finally understand what to put in the Faller class. After that, I also recreated the exercise on my own, and then added some code comments. (sketch)
+I had many trials and failures after that, it was not until the next class session that I could finally understand what to put in the Faller class. After that, I also recreated the exercise on my own, and then added some code comments. 
+
+<iframe id="homework_refactor" src="https://editor.p5js.org/MaiHanNguyen1404/full/ZqTc7mcW9"></iframe>
+
+<script type="module">
+  const iframe = document.getElementById (`homework_refactor`)
+  iframe.width  = iframe.parentNode.scrollWidth
+  iframe.height = iframe.parentNode.scrollWidth + 42
+</script>
 
 ## Rafael Rozendaal's not never no
 
@@ -42,4 +50,10 @@ I wanted to draw the circle in random places, however, it did not turn out as ex
 
 Although it wasn't what I had anticipated, it was still really interesting because they moved randomly in a set rather than in the whole grid. ![notneverno_process](w02/move_error.png) 
 
+<iframe id="homework_notneverno" src="https://editor.p5js.org/MaiHanNguyen1404/full/m8hanZpuQ"></iframe>
 
+<script type="module">
+  const iframe = document.getElementById (`homework_notneverno`)
+  iframe.width  = iframe.parentNode.scrollWidth
+  iframe.height = iframe.parentNode.scrollWidth + 42
+</script>
