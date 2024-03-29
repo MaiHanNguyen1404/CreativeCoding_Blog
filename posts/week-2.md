@@ -37,11 +37,11 @@ I had many trials and failures after that, it was not until the next class sessi
 
 In Rafael Ronzendaal's work Not never no, the circles are filled with moving gradients and the circles also slightly move their position. So firstly, I create a gradient by drawing a series of concentric circles. I used the Iteration (For loop) to create multiple smaller circles within the previous circle, then using rotation the hue value. ![notneverno_process](w02/gradient1.png) 
 
-As I wanted to create multiple circles using the properties, I made the draw gradient a function and called that function in the draw function. However, the circle suddenly turned into a square, and when I deactivated the 'moving' code, it seemed normal again. I think the problem is with the 'moving' animation. (move_error1) (functionerror) (move)
+As I wanted to create multiple circles using the properties, I made the draw gradient a function and called that function in the draw function. However, the circle suddenly turned into a square, and when I deactivated the 'moving' code, it seemed normal again. I think the problem is with the 'moving' animation.
 <p float="center">
   <img src="/w02/move_error1.png" width="30%" />
   <img src="/w02/functionerror.png" width="30%%" /> 
-  <img src="/w02/move.png" width="30%%" /> 
+  <img src="/w02/static.png" width="30%%" /> 
 </p>
 
 To draw many circles on the canvas, I used the Nested Loop to draw the grid first. ![notneverno_process](w02/multiple_circle.png) 
