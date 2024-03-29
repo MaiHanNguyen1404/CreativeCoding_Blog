@@ -9,12 +9,11 @@ disable_html_sanitization: true
 
 ## Refactor 
 
-## Rafael Rozendaal's not never no
-<iframe id="homework_notneverno" src="https://editor.p5js.org/MaiHanNguyen1404/full/m8hanZpuQ"></iframe>
+For this Refactor exercise, first I watched some tutotials to understand better how Class work. I mostly watched The Coding Train tutorials and practiced alongside with the video. (tut1, tut2)
 
-<script type="module">
-  const iframe = document.getElementById (`homework_notneverno`)
-  iframe.width  = iframe.parentNode.scrollWidth
-  iframe.height = iframe.parentNode.scrollWidth + 42
-</script>
+
+
+## Rafael Rozendaal's not never no
+
+
 
