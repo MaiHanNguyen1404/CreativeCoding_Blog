@@ -61,7 +61,7 @@ Although it wasn't what I had anticipated, it was still really interesting becau
 <iframe id="homework_notneverno2" src="https://editor.p5js.org/MaiHanNguyen1404/full/VayezPynB"></iframe>
 
 <script type="module">
-  const iframe = document.getElementById (`homework_notneverno`)
+  const iframe = document.getElementById (`homework_notneverno2`)
   iframe.width  = iframe.parentNode.scrollWidth
   iframe.height = iframe.parentNode.scrollWidth + 42
 </script>
