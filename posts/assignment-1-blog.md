@@ -117,3 +117,5 @@ Then I think of changing the color trail of the box and of course redraw the bac
 
 Before thinking about redraw the background, I already think of doing something for when the ball touch the box edges for a slight randomness in effective complexity elements. So then, I combined both idea to make the background change (redraw the background) whenever the ball touch the box edges. 
 
+I defined a background color function then call it in the Conditional (if). ![ams1_process](w03/function_bg.png)
+
