@@ -111,3 +111,9 @@ However, the ball did not start where the mouse click but in the same position w
 
 However, when I just put the radius value in the parameter, the starting position of the new ball is different from the first one. ![ams1_process](w03/vector_value.png)
 
+Working next on the color of each object. As I was experimenting with different color value, I found out that remove the background from draw function create as trail (as it doesn’t redraw the background), which is quite interesting in 3D dimension since it could be control by the viewer. ![ams1_process](w03/color1.png)
+
+Then I think of changing the color trail of the box and of course redraw the background after some time. So first for the color trail of the box, I used the random color inside of Stroke. ![ams1_process](w03/box_stroke.png)
+
+Before thinking about redraw the background, I already think of doing something for when the ball touch the box edges for a slight randomness in effective complexity elements. So then, I combined both idea to make the background change (redraw the background) whenever the ball touch the box edges. 
+
