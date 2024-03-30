@@ -69,7 +69,7 @@ I started looking up 3D in p5 since I wanted to have the image of a box. In add
 
 Firsty, I created a box and a ball (sphere) in the center of the world (vector (0,0,0)) ![ams1_process](w03/create_box_sphere.png)
 
-Then, animated the ball to bounce around the box using same logic with the code from my first week homework (recreating Rafael Rozendadal work's Only Suddenly), only now I have to consider the vector of the ball in 3D. Since it used different dimension, it took me some experiment to get the correct boundaries of the box. [ball_bounceout 1,2,3]
+Then, animated the ball to bounce around the box using same logic with the code from my first week homework (recreating Rafael Rozendadal work's Only Suddenly), only now I have to consider the vector of the ball in 3D. Since it used different dimension, it took me some experiment to get the correct boundaries of the box. 
 <p float="center">
   <img src="/w03/ball_bounceout1.png" width="32%"/>
   <img src="/w03/ball_bounceout2.png" width="32%"/>
@@ -84,3 +84,12 @@ To tidy the code, I turned the boundaries value into a variable.
 
 To create more balls later on, I moved the ball to a Class. I forgot to change the name of sphere and used it to name a function, which result in an error. ![ams1_process](w03/naming_error.png)
 
+After changing the name, the code worked normally.  [class_inside1, screenshot 2] [class_outside1,2]
+<p float="center">
+  <img src="/w03/class_inside1.png" width="45%"/>
+  <img src="/w03/class_inside2.png" width="45%"/>
+</p>
+<p float="center">
+  <img src="/w03/class_outside1.png" width="45%"/>
+  <img src="/w03/class_outside2.png" width="45%"/>
+</p>
