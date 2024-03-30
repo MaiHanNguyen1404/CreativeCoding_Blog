@@ -119,3 +119,6 @@ Before thinking about redraw the background, I already think of doing something 
 
 I defined a background color function then call it in the Conditional (if). ![ams1_process](w03/function_bg.png)
 
+With the array, the ball does not appear with the box when starting the sketch, therefore, it might be confusing for the viewer and also the background doesn’t redraw which might lead to crashing later on. ![ams1_process](w03/initial_ball1.png)
+
+So I tried to create the ball with the box first then later, more balls could be added by pressing the mouse. ![ams1_process](w03/initial_ball2.png)
