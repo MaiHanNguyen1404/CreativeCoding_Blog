@@ -37,8 +37,8 @@ Within the ‘cute’ aesthetic, effective complexity acts as an engagement, an 
 ### Rafael Rozendaal's slick quick
 For this assignment, I choose to respond to the work *slick quick* of Rafael Rozendaal. 
 <p float="center">
-  <img src="/w03/slickquick1.png" width="45%"/>
-  <img src="/w03/slickquick2.png" width="45%"/>
+  <img src="/w03/slickquick1.png" width="45%" height="70px"/>
+  <img src="/w03/slickquick2.png" width="45%" height="70px"/>
 </p>
 
 I think this work belongs to the aesthetic of 'cute' in the appearance and the movement of the object. The object apppears as a small circle and move within the screen borders, creating a visually pleasing color trails, which could speaks as temptation to maintain in a frame.
