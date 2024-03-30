@@ -41,22 +41,22 @@ For this assignment, I choose to respond to the work *slick quick* of Rafael Roz
   <img src="/w03/slickquick2.png" width="45%" height="70px"/>
 </p>
 
-I think this work belongs to the aesthetic of 'cute' in the appearance and the movement of the object. The object apppears as a small circle and move within the screen borders, creating a visually pleasing color trails, which could speaks as temptation to maintain in a frame.
+I think this work belongs to the aesthetic of 'cute' in the appearance and the movement of the object. The object appears as a small circle and moves within the screen borders, creating visually pleasing color trails, which could speak as the temptation to maintain in a frame.
 
 For its effective complexity, *slick quick* maintains a 'rule', a regularity, which is the object bouncing across the screen, however with the random color change whenever we press the mouse. 
 
 ### My respond
-In *slick quick*, I was interested in the constrainment of the circle bouncing and would like to retain that aspect. I think it speaks as a human desire to break out of the 'frame' and escape the reality, which is one of the purpose of the cute aesthetic that I have mentioned above. 
+In *slick quick*, I was interested in the constraintment of the circle bouncing and would like to retain that aspect. I think it speaks of a human desire to break out of the 'frame' and escape reality, which is one of the purposes of the cute aesthetic that I have mentioned above. 
 
-However, I want to answer this *slick quick* piece with a *yes however*, yes it will be constraint in a frame, however, there is an attempt to break free, but whether or not they are successfully escape is depend on the interpretation of the viewer.
+However, I want to answer this *slick quick* piece with a *yes however*, yes it will be a constraint in a frame, however, there is an attempt to break free, but whether or not they successfully escape is depend on the interpretation of the viewer.
 
-For the Cute aspect: I also want to retain the small appearance, while somewhat makes it appears fragile and vulnerable. The powerlessness could shown through having an object actually contraint in a box, however by the appearance of the trails of the box and multiplication of the objects, it will look like the object could escape.
+For the Cute aspect: I also want to retain the small appearance, while somewhat making it appear fragile and vulnerable. The powerlessness could shown through having an object actually constrained in a box, however, by the appearance of the trails of the box and multiplication of the objects, it will look like the object could escape.
 
 For the Effective Complexity: 
-- The underlying regularity: the objects bouncing within the box and change background whenever they touch the edges.
+- The underlying regularity: the objects bounce within the box and change the background whenever they touch the edges.
 - Slight randomness:
-    - Only when the obejct touch the 1 dimension of the box (not always change when touch), which could take a little time to realize
-    - Object could be multiply and move at different direction, sometimes they will cross the same path
+    - Only when the object touches the 1 dimension of the box (not always change when touched), which could take a little time to realize
+    - Objects could be multiplied and move in different directions, sometimes they will cross the same path
 
 
 # Design Journey
@@ -67,9 +67,9 @@ I started looking up 3D in p5 since I wanted to have the image of a box. In add
   <img src="/w03/orbit_control2.png" width="45%"/>
 </p>
 
-Firsty, I created a box and a ball (sphere) in the center of the world (vector (0,0,0)) ![ams1_process](w03/create_box_sphere.png)
+First, I created a box and a ball (sphere) in the center of the world (vector (0,0,0)) ![ams1_process](w03/create_box_sphere.png)
 
-Then, animated the ball to bounce around the box using same logic with the code from my first week homework (recreating Rafael Rozendadal work's Only Suddenly), only now I have to consider the vector of the ball in 3D. Since it used different dimension, it took me some experiment to get the correct boundaries of the box. 
+Then, animated the ball to bounce around the box using the same logic as the code from my first week's homework (recreating Rafael Rozendaal's work's Only Suddenly), only now I have to consider the vector of the ball in 3D. Since it used different dimensions, it took me some experiments to get the correct boundaries of the box.
 <p float="center">
   <img src="/w03/ball_bounceout1.png" width="32%"/>
   <img src="/w03/ball_bounceout2.png" width="32%"/>
@@ -82,7 +82,7 @@ To tidy the code, I turned the boundaries value into a variable.
   <img src="/w03/ball_bounce.png" width="45%"/>
 </p>
 
-To create more balls later on, I moved the ball to a Class. I forgot to change the name of sphere and used it to name a function, which result in an error. ![ams1_process](w03/naming_error.png)
+To create more balls later on, I moved the ball to a Class. I forgot to change the name of the sphere and used it to name a function, which resulted in an error. ![ams1_process](w03/naming_error.png)
 
 After changing the name, the code worked normally.
 <p float="center">
@@ -94,31 +94,33 @@ After changing the name, the code worked normally.
   <img src="/w03/class_outside2.png" width="45%"/>
 </p>
 
-To create more balls using interactivity, I researched for tutorials about Array alongside with Push and Pop. 
+To create more balls using interactivity, I researched tutorials about Array along with Push and Pop. 
 <p float="center">
   <img src="/w03/array_tut.png" width="45%"/>
   <img src="/w03/push_pop.png" width="45%"/>
 </p>
 
-I followed the tutorial to use Array and Push it to create more ball when pressing the mouse. It worked in creating new balls when mouse is pressed. ![ams1_process](w03/array_firstdraft.png)
+I followed the tutorial to use Array and Push it to create more balls when pressing the mouse. It worked in creating new balls when the mouse was pressed. ![ams1_process](w03/array_firstdraft.png)
 
-However, the ball did not start where the mouse click but in the same position with the first ball which is vector (0,0,0). As it was vector in the class, I couldn’t figure out how to bring it into the parameter value. I tried to put in the x and y value in the constructor parameter but the result is still the same.  [vector_prob 1,2,3]
+However, the ball did not start where the mouse clicked but was in the same position as the first ball which is the vector (0,0,0). As it was a vector in the class, I couldn’t figure out how to bring it into the parameter value. I tried to put in the x and y value in the constructor parameter but the result is still the same.  
 <p float="center">
   <img src="/w03/vector_prob1.png" width="32%"/>
   <img src="/w03/vector_prob2.png" width="32%"/>
   <img src="/w03/vector_prob3.png" width="32%"/>
 </p>
 
-However, when I just put the radius value in the parameter, the starting position of the new ball is different from the first one. ![ams1_process](w03/vector_value.png)
+However, when I just put the radius value in the parameter, the starting position of the new ball is different from the first one. ![ams1_process](w03/vector_value.png) 
 
-Working next on the color of each object. As I was experimenting with different color value, I found out that remove the background from draw function create as trail (as it doesn’t redraw the background), which is quite interesting in 3D dimension since it could be control by the viewer. ![ams1_process](w03/color1.png)
+Working next on the color of each object. As I was experimenting with different color values, I found out that removing the background from the draw function creates as trail (as it doesn’t redraw the background), which is quite interesting in 3D dimension since it could be controlled by the viewer. ![ams1_process](w03/color1.png)
 
-Then I think of changing the color trail of the box and of course redraw the background after some time. So first for the color trail of the box, I used the random color inside of Stroke. ![ams1_process](w03/box_stroke.png)
+Then I think of changing the color trail of the box and of course, redrawing the background after some time. So first for the color trail of the box, I used the random color inside of Stroke. ![ams1_process](w03/box_stroke.png)
 
-Before thinking about redraw the background, I already think of doing something for when the ball touch the box edges for a slight randomness in effective complexity elements. So then, I combined both idea to make the background change (redraw the background) whenever the ball touch the box edges. 
+Before thinking about redrawing the background, I already thought of doing something for when the ball touches the box edges for slight randomness for effective complexity elements. So then, I combined both ideas to make the background change (redraw the background) whenever the ball touched the box edges. 
 
-I defined a background color function then call it in the Conditional (if). ![ams1_process](w03/function_bg.png)
+I defined a background color function and then called it in the Conditional (if). The function was called only in the Condition when the ball touched the x position of the box, to not overwhelm the viewer with too much changing. ![ams1_process](w03/function_bg.png)
 
 With the array, the ball does not appear with the box when starting the sketch, therefore, it might be confusing for the viewer and also the background doesn’t redraw which might lead to crashing later on. ![ams1_process](w03/initial_ball1.png)
 
 So I tried to create the ball with the box first then later, more balls could be added by pressing the mouse. ![ams1_process](w03/initial_ball2.png)
+
+Through the multiplication of the ball later on, it appears as though they could "break out" of the box, however, the initial ball was unable to do so, which indicates the desire to break free yet can not quite achieve that. 
