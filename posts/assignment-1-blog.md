@@ -67,3 +67,15 @@ I started looking up 3D in p5 since I wanted to have the image of a box. In add
   <img src="/w03/orbit_control2.png" width="45%"/>
 </p>
 
+Firsty, I created a box and a ball (sphere) in the center of the world (vector (0,0,)) 
+<p float="center">
+  <img src="/w03/create_box_sphere.png" width="90%"/>
+</p>
+
+Then, animated the ball to bounce around the box using same logic with the code from my first week homework (recreating Rafael Rozendadal work's Only Suddenly), only now I have to consider the vector of the ball in 3D. Since it used different dimension, it took me some experiment to get the correct boundaries of the box. [ball_bounceout 1,2,3]
+<p float="center">
+  <img src="/w03/bal_bounceout1.png" width="30%"/>
+  <img src="/w03/bal_bounceout2.png" width="30%"/>
+  <img src="/w03/bal_bounceout3.png" width="30%"/>
+</p>
+
