@@ -63,7 +63,7 @@ For the Effective Complexity:
 
 I started looking up 3D in p5 since I wanted to have the image of a box. In addition to that, I also learned about orbit control, which allows you to drag and move around the world, along with camera settings. This control, in my opinion, creates interactivity and engagement. 
 <p float="center">
-  <img src="/w03/orbit_control1.png" width="45%" height="50px"/>
+  <img src="/w03/orbit_control1.png" width="45%" height="40px"/>
   <img src="/w03/orbit_control2.png" width="45%"/>
 </p>
 
