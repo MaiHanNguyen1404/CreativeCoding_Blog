@@ -5,7 +5,9 @@ snippet: This blog is about Assignment 1 working process.
 disable_html_sanitization: true
 ---
 
-# Research and Definition
+# Concepts
+
+## Research and Definition
 
 ### The Cute aesthetic:
 From this week's reading about Sianne Ngai’s Zany, Cute, Interesting, and some more articles, the definition of ‘cute’ aesthetic, in my opinion, is the desire to become intimate through the act of vulnerability. The cute evokes feeling through its vulnerable, diminutive form and tempting for special care. Its powerlessness can be extremely seductive (Wark 2020). The cute production could be seen as capitalism itself, an obvious example is the Kawaii culture of cuteness in Japan's post-war period through the mass production of toys, manga, and ephemera. 
@@ -30,10 +32,9 @@ In Rafael Rozendaal’s work, there’s always a repeated pattern, a ‘rule’ 
 
 Within the ‘cute’ aesthetic, effective complexity acts as an engagement, an element for the viewer to crave more. If the purpose of the cute is to create a fantasy or a reflection of our gaze, then the effective complexity is to ‘loop’ the fantasy while adding some unexpected elements.
 
+## Ideation
 
-# Concepts
-
-## Rafael Rozendaal's slick quick
+### Rafael Rozendaal's slick quick
 For this assignment, I choose to respond to the work *slick quick* of Rafael Rozendaal. 
 <p float="center">
   <img src="/w03/slickquick1.png" width="45%" height="70px"/>
@@ -44,7 +45,7 @@ I think this work belongs to the aesthetic of 'cute' in the appearance and the m
 
 For its effective complexity, *slick quick* maintains a 'rule', a regularity, which is the object bouncing across the screen, however with the random color change whenever we press the mouse. 
 
-## Ideation (My Respond)
+### My respond
 In *slick quick*, I was interested in the constrainment of the circle bouncing and would like to retain that aspect. I think it speaks as a human desire to break out of the 'frame' and escape the reality, which is one of the purpose of the cute aesthetic that I have mentioned above. 
 
 However, I want to answer this *slick quick* piece with a *yes however*, yes it will be constraint in a frame, however, there is an attempt to break free, but whether or not they are successfully escape is depend on the interpretation of the viewer.
@@ -56,6 +57,5 @@ For the Effective Complexity:
 - Slight randomness:
     - Only when the obejct touch the 1 dimension of the box (not always change when touch), which could take a little time to realize
     - Object could be multiply and move at different direction, sometimes they will cross the same path
-
 
 # Design Journey
