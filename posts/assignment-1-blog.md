@@ -33,3 +33,16 @@ In Rafael Rozendaal’s work, there’s always a repeated pattern, a ‘rule’ 
 Within the ‘cute’ aesthetic, effective complexity acts as an engagement, an element for the viewer to crave more. If the purpose of the cute is to create a fantasy or a reflection of our gaze, then the effective complexity is to ‘loop’ the fantasy while adding some unexpected elements.
 
 ## Ideation
+
+### Rafael Rozendaal's slick quick
+For this assignment, I choose to respond to the work *slick quick* of Rafael Rozendaal. 
+<p float="center">
+  <img src="/w03/slickquick1.png" width="45%"/>
+  <img src="/w03/slickquick2.png" width="45%"/>
+</p>
+
+I think this work belongs to the aesthetic of 'cute' in the appearance and the movement of the object. The object apppears as a small circle and move within the screen borders, tempting to break out of the screen, which could speak as a desire of the viewer. 
+
+For its effective complexity, *slick quick* maintains a 'rule', a regularity, which is the object bouncing across the screen, however with the random color change whenever we press the mouse. 
+
+### My respond
