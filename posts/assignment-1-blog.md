@@ -84,7 +84,7 @@ To tidy the code, I turned the boundaries value into a variable.
 
 To create more balls later on, I moved the ball to a Class. I forgot to change the name of sphere and used it to name a function, which result in an error. ![ams1_process](w03/naming_error.png)
 
-After changing the name, the code worked normally.  [class_inside1, screenshot 2] [class_outside1,2]
+After changing the name, the code worked normally.
 <p float="center">
   <img src="/w03/class_inside1.png" width="45%"/>
   <img src="/w03/class_inside2.png" width="45%"/>
@@ -92,4 +92,19 @@ After changing the name, the code worked normally.  [class_inside1, screenshot 2
 <p float="center">
   <img src="/w03/class_outside1.png" width="45%"/>
   <img src="/w03/class_outside2.png" width="45%"/>
+</p>
+
+To create more balls using interactivity, I researched for tutorials about Array alongside with Push and Pop. 
+<p float="center">
+  <img src="/w03/array_tut.png" width="45%"/>
+  <img src="/w03/push_pop.png" width="45%"/>
+</p>
+
+I followed the tutorial to use Array and Push it to create more ball when pressing the mouse. It worked in creating new balls when mouse is pressed. ![ams1_process](w03/array_firstdraft.png)
+
+However, the ball did not start where the mouse click but in the same position with the first ball which is vector (0,0,0). As it was vector in the class, I couldn’t figure out how to bring it into the parameter value. I tried to put in the x and y value in the constructor parameter but the result is still the same.  [vector_prob 1,2,3]
+<p float="center">
+  <img src="/w03/vector_prob1.png" width="32%"/>
+  <img src="/w03/vector_prob2.png" width="32%"/>
+  <img src="/w03/vector_prob3.png" width="32%"/>
 </p>
