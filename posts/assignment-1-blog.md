@@ -128,5 +128,6 @@ Through the multiplication of the ball later on, it appears as though they could
   <img src="/w03/look1.png" width="47%"/>
   <img src="/w03/look2.png" width="47%"/>
 </p>
+
 *Final visual of the sketch starting view and zooming in view* 
 
