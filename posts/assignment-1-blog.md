@@ -79,7 +79,7 @@ Then, animated the ball to bounce around the box using same logic with the code 
 To tidy the code, I turned the boundaries value into a variable. 
 <p float="center">
   <img src="/w03/offset.png" width="45%"/>
-  <img src="/w03/ball_bounceout.png" width="45%"/>
+  <img src="/w03/ball_bounce.png" width="45%"/>
 </p>
 
 To create more balls later on, I moved the ball to a Class. I forgot to change the name of sphere and used it to name a function, which result in an error. ![ams1_process](w03/naming_error.png)
