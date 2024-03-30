@@ -124,3 +124,9 @@ With the array, the ball does not appear with the box when starting the sketch, 
 So I tried to create the ball with the box first then later, more balls could be added by pressing the mouse. ![ams1_process](w03/initial_ball2.png)
 
 Through the multiplication of the ball later on, it appears as though they could "break out" of the box, however, the initial ball was unable to do so, which indicates the desire to break free yet can not quite achieve that. 
+<p float="center">
+  <img src="/w03/look1.png" width="47%"/>
+  <img src="/w03/look2.png" width="47%"/>
+</p>
+*Final visual of the sketch starting view and zooming in view* 
+
