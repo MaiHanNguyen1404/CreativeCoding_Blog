@@ -108,3 +108,6 @@ However, the ball did not start where the mouse click but in the same position w
   <img src="/w03/vector_prob2.png" width="32%"/>
   <img src="/w03/vector_prob3.png" width="32%"/>
 </p>
+
+However, when I just put the radius value in the parameter, the starting position of the new ball is different from the first one. ![ams1_process](w03/vector_value.png)
+
