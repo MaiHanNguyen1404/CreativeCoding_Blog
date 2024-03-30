@@ -130,5 +130,7 @@ Through the multiplication of the ball later on, it appears as though they could
 </p>
 
 *Final visual of the sketch starting view and zooming in view* 
-<p float="center">
+<p>
+
+
 </p>
