@@ -41,8 +41,19 @@ For this assignment, I choose to respond to the work *slick quick* of Rafael Roz
   <img src="/w03/slickquick2.png" width="45%"/>
 </p>
 
-I think this work belongs to the aesthetic of 'cute' in the appearance and the movement of the object. The object apppears as a small circle and move within the screen borders, tempting to break out of the screen, which could speak as a desire of the viewer. 
+I think this work belongs to the aesthetic of 'cute' in the appearance and the movement of the object. The object apppears as a small circle and move within the screen borders, creating a visually pleasing color trails, which could speaks as temptation to maintain in a frame.
 
 For its effective complexity, *slick quick* maintains a 'rule', a regularity, which is the object bouncing across the screen, however with the random color change whenever we press the mouse. 
 
 ### My respond
+In *slick quick*, I was interested in the constrainment of the circle bouncing and would like to retain that aspect. I think it speaks as a human desire to break out of the 'frame' and escape the reality, which is one of the purpose of the cute aesthetic that I have mentioned above. 
+
+However, I want to answer this *slick quick* piece with a *yes however*, yes it will be constraint in a frame, however, there is an attempt to break free, but whether or not they are successfully escape is depend on the interpretation of the viewer.
+
+For the Cute aspect: I also want to retain the small appearance, while somewhat makes it appears fragile and vulnerable. The powerlessness could shown through having an object actually contraint in a box, however by the appearance of the trails of the box and multiplication of the objects, it will look like the object could escape.
+
+For the Effective Complexity: 
+- The underlying regularity: the objects bouncing within the box and change background whenever they touch the edges.
+- Slight randomness:
+    - Only when the obejct touch the 1 dimension of the box (not always change when touch), which could take a little time to realize
+    - Object could be multiply and move at different direction, sometimes they will cross the same path
