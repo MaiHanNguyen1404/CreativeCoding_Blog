@@ -31,3 +31,5 @@ The Effective Complexity in my opinion is the underlying regularity within a sys
 In Rafael Rozendaal’s work, there’s always a repeated pattern, a ‘rule’ of how the object interacts within the screen (eg. in *falling falling*, the walls fall repeatedly after one another), however with a few unexpected elements to add in the ‘complexity’ (eg. the random color appears). 
 
 Within the ‘cute’ aesthetic, effective complexity acts as an engagement, an element for the viewer to crave more. If the purpose of the cute is to create a fantasy or a reflection of our gaze, then the effective complexity is to ‘loop’ the fantasy while adding some unexpected elements.
+
+## Ideation
