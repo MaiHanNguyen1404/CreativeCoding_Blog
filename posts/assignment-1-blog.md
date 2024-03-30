@@ -82,4 +82,5 @@ To tidy the code, I turned the boundaries value into a variable.
   <img src="/w03/ball_bounceout.png" width="45%"/>
 </p>
 
-To create more balls later on, I move the ball to a Class. I forgot to change the name of sphere and used it to name a function, which result in an error. [naming_error]
+To create more balls later on, I moved the ball to a Class. I forgot to change the name of sphere and used it to name a function, which result in an error. ![ams1_process](w03/naming_error.png)
+
