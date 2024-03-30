@@ -134,7 +134,7 @@ Through the multiplication of the ball later on, it appears as though they could
 <iframe id="asm1" src="https://editor.p5js.org/MaiHanNguyen1404/full/s3C8g-3TX"></iframe>
 
 <script type="module">
-  const iframe = document.getElementById (`ams1`)
+  const iframe = document.getElementById (`asm1`)
   iframe.width  = iframe.parentNode.scrollWidth
   iframe.height = iframe.parentNode.scrollWidth + 42
 </script>
