@@ -57,3 +57,5 @@ For the Effective Complexity:
 - Slight randomness:
     - Only when the obejct touch the 1 dimension of the box (not always change when touch), which could take a little time to realize
     - Object could be multiply and move at different direction, sometimes they will cross the same path
+
+# Design Journey
