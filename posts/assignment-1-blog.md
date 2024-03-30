@@ -44,7 +44,7 @@ I think this work belongs to the aesthetic of 'cute' in the appearance and the m
 
 For its effective complexity, *slick quick* maintains a 'rule', a regularity, which is the object bouncing across the screen, however with the random color change whenever we press the mouse. 
 
-## Ideation
+## Ideation (My Respond)
 In *slick quick*, I was interested in the constrainment of the circle bouncing and would like to retain that aspect. I think it speaks as a human desire to break out of the 'frame' and escape the reality, which is one of the purpose of the cute aesthetic that I have mentioned above. 
 
 However, I want to answer this *slick quick* piece with a *yes however*, yes it will be constraint in a frame, however, there is an attempt to break free, but whether or not they are successfully escape is depend on the interpretation of the viewer.
