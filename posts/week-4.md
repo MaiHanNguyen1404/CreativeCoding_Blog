@@ -90,4 +90,10 @@ I need to return the origin of the line to the previous place before drawing the
   <img src="/w04/result.png" width="45%" /> 
 </p>
 
+*Can this method be used to maximize chaos?  How might you use it in your AT2?*
+
+In my opinion, while recursion itself doesn't directly create chaos (since it creates repeated patterns), it can be a tool to explore chaotic systems with randomness. By introducing tiny variations to the initial values within the recursive calls, it could generate unpredictable patterns. For example, using random values within calculations at each level of recursion.
+
+However, excessive randomness can quickly lead to unrecognizable patterns, which I think may disrupt the chaotic experience. The key is to make controlled variations that enhance the complexity of the pattern (or fractal) while maintaining its overall structure.
+
 
