@@ -66,26 +66,26 @@ drawBranch (200)
 
 ```
 
-At first, I was a little infamiliar with Canvas API, so I need some time to read through the resources and watch the tutorials from Coding Train about recursion. ![W4_homework](w04/tutorial.png) 
+At first, I was a little unfamiliar with Canvas API, so I needed some time to read through the resources and watch the tutorials from Coding Train about recursion. ![W4_homework](w04/tutorial.png) 
 
-The vector way of creating a fractal tree in the Examples was a bit confusing for me, therefore, I tried to recreate it in a simplier approach which I learnt from this tutorial. ![W4_homework](w04/tut2.png) 
+The vector way of creating a fractal tree in the Examples was a bit confusing for me, therefore, I tried to recreate it in a simpler approach which I learned from this tutorial. ![W4_homework](w04/tut2.png) 
 
-First, I followed the tutorial to understand what recursion is and the approach to draw a fractal. 
+First, I followed the tutorial to understand what recursion is and the approach to drawing a fractal. 
 <p float="center">
   <img src="/w04/one_side.png" width="45%" />
   <img src="/w04/two_side.png" width="45%" /> 
 </p>
 
-I made one side of the fractal tree first then duplicated and changed the rotation value to create the other side of the tree. In the tutorial, I learnt the *save* and *restore* function, which are similiar to the *push* and *pop* function in p5, to wrap the format only for one block. Also, I used *return* to stop executing the code if the generation is larger than the maximum number which was defined before.
+I made one side of the fractal tree first then duplicated and changed the rotation value to create the other side of the tree. In the tutorial, I learned the *save* and *restore* functions, which are similar to the *push* and *pop* functions in p5, to wrap the format only for one block. Also, I used *return* to stop executing the code if the generation is larger than the maximum number that was defined before.
 
-Then after understand the code better, I changed the argument inside the function to *length* (no need to define the maximum level). However, there was a problem when draw two sides of the tree. The left and right branches of the tree all draw into one line.
+Then after understanding the code better, I changed the argument inside the function to *length* (no need to define the maximum level). However, there was a problem when drawing two sides of the tree. The left and right branches of the tree all draw into one line.
 <p float="center">
   <img src="/w04/onesideprob.png" width="45%" />
   <img src="/w04/onesideprob2.png" width="45%" /> 
 </p>
 
-I need to return the origin of the line to the previous place before drawing the other side of the branches. For that, I used the *save* and *restore* function to return previous setting. 
- <p float="center">
+I need to return the origin of the line to the previous place before drawing the other side of the branches. For that, I used the *save* and *restore* functions to return the previous setting.
+<p float="center">
   <img src="/w04/two_side2.png" width="45%" />
   <img src="/w04/result.png" width="45%" /> 
 </p>
