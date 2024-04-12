@@ -9,7 +9,7 @@ disable_html_sanitization: true
 
 ## Fractal
 
-Fractal Tree link: [w4-homework] (https://week4-fractal.deno.dev/)
+Fractal Tree link: https://week4-fractal.deno.dev/
 
 ``` javascript
 
