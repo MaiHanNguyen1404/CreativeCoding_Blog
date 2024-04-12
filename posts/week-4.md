@@ -45,7 +45,7 @@ function drawBranch (length) {
 
    ctx.translate (0, -length)
 
-   // stop the excuting if the branch length is less than 10
+   // stop the excuting the recursion if the branch length is less than 10
    if (length > 10) {
     // draw right branch
     ctx.save () 
