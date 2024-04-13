@@ -65,21 +65,30 @@ disable_html_sanitization: true
       const i = new Image () // Create new image objects for each glitched version.
       // Once a glitched image has successfully loaded
       i.onload = () => { 
-         glitch_arr.push (i) // Pushes the glitched image object into the glitch array
+         glitch_arr.push (i) // Push the glitched image object into the glitch array
          if (glitch_arr.length < 12) add_glitch () // Recursively call the add_glitch function if the glitch array length is less than 12 (12 glitched version is created)
          else draw_frame () // Call the draw_frame function if the glitch array length reaches 12 or more
       }
-      i.src = glitchify (img_data, 96, 6)
+      i.src = glitchify (img_data, 96, 6) //
    }
 
    let is_glitching = false 
-   let glitch_i = 0
+   let glitch_i = 0 
 
    const draw_frame = () => {
-      if (is_glitching) draw (glitch_arr[glitch_i])
-      else draw (img)
+      if (is_glitching) draw (glitch_arr[glitch_i]) // Continue to draw the first item of the glitch array if draw_frame is false (add_glitch function still calls)
+      else draw (img) // Otherwise draws the original image
 
+      //Conditional probability: 
+        //condition ? expression_if_true : expression_if_false
+        // if (is_glitching) {
+        //     prob = 0.05;
+        // } else {
+        //     prob = 0.02;
+        // }
+      // Probability if is_glitching is true: 0.05 (5%), Probability if is_glitching is false: 0.02 (2%)
       const prob = is_glitching ? 0.05 : 0.02
+      //
       if (Math.random () < prob) {
          glitch_i = rand_int (glitch_arr.length)
          is_glitching = !is_glitching
