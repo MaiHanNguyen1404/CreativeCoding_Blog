@@ -7,7 +7,7 @@ disable_html_sanitization: true
 
 # Homework
 
-## Add explanatory comments
+## 1. Add explanatory comments
 
 ### Glitch
 
