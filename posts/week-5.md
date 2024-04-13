@@ -18,32 +18,38 @@ disable_html_sanitization: true
 
    const cnv = document.getElementById (`glitch_self_portrait`)
    cnv.width = cnv.parentNode.scrollWidth
-   cnv.height = cnv.width * 9 / 16
-   cnv.style.backgroundColor = `deeppink`
+   cnv.height = cnv.width * 9 / 16 // 16:9 aspect ratio
+   cnv.style.backgroundColor = `deeppink` // Sets the background color of the canvas to deeppink.
+
 
    const ctx = cnv.getContext (`2d`)
 
    let img_data
 
+    // Define a draw function with unknown image value i
     // function draw (i) {
     // ctx.drawImage (i, 0, 0, cnv.width, cnv.height)
     // }
-    // define a draw function with unknown image value i
-   const draw = i => ctx.drawImage (i, 0, 0, cnv.width, cnv.height) 
+   const draw = i => ctx.drawImage (i, 0, 0, cnv.width, cnv.height) //(image, dx, dy, dWidth, dHeight)
 
-   const img = new Image ()
+   // Create a new image 
+   const img = new Image () 
+
+   // Define the function to run new image once the image successfully loads its resource
    img.onload = () => {
-      cnv.height = cnv.width * (img.height / img.width)
-      draw (img)
-      img_data = cnv.toDataURL ("image/jpeg")
-      add_glitch ()
+      cnv.height = cnv.width * (img.height / img.width) // Adjusts the canvas height based on the image's aspect ratio
+      draw (img) // Call the draw function with the new image as the argument - draw the image to the canvas
+      img_data = cnv.toDataURL ("image/jpeg") // Set the image data to jpeg
+      add_glitch () // Call the add_glitch function
    }
-   img.src = `/240405/pfp_glasses.jpg`
+   img.src = `/240405/pfp_glasses.jpg` // The image source
 
+   // Define a function to generate random integer (not fractional number) within the maximum number
    const rand_int = max => Math.floor (Math.random () * max)
 
+   // Define a glitch function 
    const glitchify = (data, chunk_max, repeats) => {
-      const chunk_size = rand_int (chunk_max / 4) * 4
+      const chunk_size = rand_int (chunk_max / 4) * 4 // 
       const i = rand_int (data.length - 24 - chunk_size) + 24
       const front = data.slice (0, i)
       const back = data.slice (i + chunk_size, data.length)
