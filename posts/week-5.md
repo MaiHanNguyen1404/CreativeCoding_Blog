@@ -25,7 +25,11 @@ disable_html_sanitization: true
 
    let img_data
 
-   const draw = i => ctx.drawImage (i, 0, 0, cnv.width, cnv.height)
+    // function draw (i) {
+    // ctx.drawImage (i, 0, 0, cnv.width, cnv.height)
+    // }
+    // define a draw function with unknown image value i
+   const draw = i => ctx.drawImage (i, 0, 0, cnv.width, cnv.height) 
 
    const img = new Image ()
    img.onload = () => {
@@ -78,3 +82,4 @@ disable_html_sanitization: true
 </script>
 
 ```
+
