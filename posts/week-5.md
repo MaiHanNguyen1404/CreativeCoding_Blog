@@ -235,10 +235,12 @@ const quicksort = a => {
 }
 
 export class PixelSorter {
+   // PixelSorter class with context as a parameter
    constructor (ctx) {
       this.ctx = ctx
    }
 
+   // Define init function 
    init () {
       this.width = this.ctx.canvas.width
       this.height = this.ctx.canvas.height
