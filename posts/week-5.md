@@ -110,7 +110,7 @@ disable_html_sanitization: true
       // If a random number between 0 to 1 (< 1) is less than the probability
       if (Math.random () < prob) {
          glitch_i = rand_int (glitch_arr.length) 
-         //Switch between displaying the glitched image and the original image
+         // Switch between displaying the glitched image and the original image
          is_glitching = !is_glitching 
       }
 
