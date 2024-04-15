@@ -31,7 +31,8 @@ disable_html_sanitization: true
     // function draw (i) {
     // ctx.drawImage (i, 0, 0, cnv.width, cnv.height)
     // }
-   const draw = i => ctx.drawImage (i, 0, 0, cnv.width, cnv.height) //(image, dx, dy, dWidth, dHeight)
+   const draw = i => ctx.drawImage (i, 0, 0, cnv.width, cnv.height) 
+   //(image, dx, dy, dWidth, dHeight)
 
    // Create a new image 
    const img = new Image () 
@@ -40,7 +41,8 @@ disable_html_sanitization: true
    img.onload = () => {
       // Adjusts the canvas height based on the image's aspect ratio
       cnv.height = cnv.width * (img.height / img.width) 
-      // Call the draw function with the new image as the argument - draw the image to the canvas
+      // Call the draw function with the new image as the argument 
+      // draw the image to the canvas
       draw (img) 
       // Set the canvas data into a image data
       img_data = cnv.toDataURL ("image/jpeg") 
@@ -56,7 +58,8 @@ disable_html_sanitization: true
    const glitchify = (data, chunk_max, repeats) => {
       // Picks a random chunk size (multiply by 4) within the maximum range (to glitch)
       const chunk_size = rand_int (chunk_max / 4) * 4 
-      // Select a random portion of image data excluding the first 24 bytes and the glitch chunk size
+      // Select a random portion of image data excluding 
+      // the first 24 bytes and the glitch chunk size
       const i = rand_int (data.length - 24 - chunk_size) + 24
       // Remove the first part of the data to i
       const front = data.slice (0, i) 
@@ -64,14 +67,16 @@ disable_html_sanitization: true
       const back = data.slice (i + chunk_size, data.length) 
       // Combining the front and back portions of the selected data
       const result = front + back 
-      // Call the function recursively, stops executing the function when the the repeats time reach 0
+      // Call the function recursively
+      // stops executing the function when the the repeats time reach 0
       return repeats == 0 ? result : glitchify (result, chunk_max, repeats - 1) 
    }
 
    // Create an empty glitch array  
    const glitch_arr = []
 
-   // Define function to create multiple glitched versions of the image using the glitchify function
+   // Define function to create multiple glitched versions of the image 
+   // using the glitchify function
    const add_glitch = () => {
       // Create new image objects for each glitched version.
       const i = new Image () 
@@ -79,9 +84,11 @@ disable_html_sanitization: true
       i.onload = () => { 
          // Push the glitched image object into the glitch array
          glitch_arr.push (i) 
-         // Recursively call the add_glitch function if less than 12 glitched version is created
+         // Recursively call the add_glitch function 
+         // if less than 12 glitched version is created
          if (glitch_arr.length < 12) add_glitch () 
-         // Call the draw_frame function if the glitch array length reaches 12 or more
+         // Call the draw_frame function 
+         // if the glitch array length reaches 12 or more
          else draw_frame () 
       }
       i.src = glitchify (img_data, 96, 6) //
@@ -104,8 +111,8 @@ disable_html_sanitization: true
         // } else {
         //     prob = 0.02;
         // }
-      // Probability if is_glitching is true: 0.05 (5%) - currently display the glitched image
-      // Probability if is_glitching is false: 0.02 (2%) - currently display the original image
+      // Probability if is_glitching is true: 5% - currently display the glitched image
+      // Probability if is_glitching is false: 2% - currently display the original image
       const prob = is_glitching ? 0.05 : 0.02
       // If a random number between 0 to 1 (< 1) is less than the probability
       if (Math.random () < prob) {
