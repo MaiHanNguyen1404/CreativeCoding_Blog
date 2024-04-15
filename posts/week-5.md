@@ -200,7 +200,6 @@ disable_html_sanitization: true
 ```
 
 ```classjs
-
 // pixel_sort.js
 
 const quicksort = a => {
