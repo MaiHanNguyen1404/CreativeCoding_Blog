@@ -208,7 +208,7 @@ const quicksort = a => {
    // 
    if (a.length <= 1) return a
 
-   // Take the first element of the array 'a' as the pivot
+   // Take the first element of the array 'a' as the pivot element 
    let pivot = a[0]
    // Create an empty left array
    let left = []
@@ -217,13 +217,20 @@ const quicksort = a => {
 
    // Iterate through the remaining elements of the array (exclude the first element)
    for (let i = 1; i < a.length; i++) {
-      // 
+      // If the current element's (a[i]) brightness (br)  is less than the pivot's, 
+      // push the element to the left array
       if (a[i].br < pivot.br) left.push (a[i])
+      // Otherwise, push the element to the right array
       else right.push (a[i])
    }
 
+   // ... means Spread Operators to to spread array values or iterables into an array
+   // Create a sorted array 
+   // with result of recursively sorting the left array, the original pivot element (a[0])
+   // and result of recursively sorting the right array 
    const sorted = [ ...quicksort (left), pivot, ...quicksort (right) ]
 
+   // Return the sorted array (in descending order based on the brightness value)
    return sorted
 }
 
