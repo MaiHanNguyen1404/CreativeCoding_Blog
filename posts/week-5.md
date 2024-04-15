@@ -97,6 +97,7 @@ disable_html_sanitization: true
    let is_glitching = false 
    let glitch_i = 0 
 
+   // Define a draw_frame function
    const draw_frame = () => {
       // Continue to draw the first item of the glitch array if draw_frame is false 
       // (add_glitch function still calls)
@@ -140,23 +141,32 @@ disable_html_sanitization: true
 
    const cnv  = document.getElementById (`pixel_sort`)
    cnv.width  = cnv.parentNode.scrollWidth
-   cnv.height = cnv.width * 9 / 16   
+   cnv.height = cnv.width * 9 / 16 // 16:9 aspect ratio
 
    const ctx = cnv.getContext (`2d`)
-   const sorter = new PixelSorter (ctx)
+   // Creates an instance of a PixelSorter class with context as a parameter
+   const sorter = new PixelSorter (ctx) 
 
-   const img = new Image ()
+   // Create a new image 
+   const img = new Image () 
 
+   // Run new image once the image has successfully loaded its resource
    img.onload = () => {
+      // Adjusts the canvas height based on the image's aspect ratio
       cnv.height = cnv.width * (img.height / img.width)
+      // Call the draw function with the new image as the argument 
+      // draw the image to the canvas
       ctx.drawImage (img, 0, 0, cnv.width, cnv.height)
+      // 
       sorter.init ()
+      // Call the draw_frame function
       draw_frame ()
    }
 
-   img.src = `/240408/kornerpark.jpg`
+   img.src = `/240408/kornerpark.jpg` // The image source
 
    let frame_count = 0
+   // Define a draw_frame function
    const draw_frame = () => {
 
       ctx.drawImage (img, 0, 0, cnv.width, cnv.height)
