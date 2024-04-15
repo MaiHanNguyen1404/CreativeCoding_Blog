@@ -199,7 +199,7 @@ disable_html_sanitization: true
 
 ```
 
-``` javascript class
+```javascript_class
 
 // pixel_sort.js
 
