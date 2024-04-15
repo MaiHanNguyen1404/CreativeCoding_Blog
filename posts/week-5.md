@@ -200,7 +200,7 @@ disable_html_sanitization: true
 
 ```
 
-```classjs
+```javascript
 // pixel_sort.js
 
 // Define a quicksort function with 'a' as the parameter
@@ -226,7 +226,8 @@ const quicksort = a => {
 
    // ... means Spread Operators to to spread array values or iterables into an array
    // Create a sorted array 
-   // with result of recursively sorting the left array, the original pivot element (a[0])
+   // with result of recursively sorting the left array, 
+   // the original pivot element (a[0]),
    // and result of recursively sorting the right array 
    const sorted = [ ...quicksort (left), pivot, ...quicksort (right) ]
 
