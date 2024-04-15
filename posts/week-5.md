@@ -132,7 +132,7 @@ disable_html_sanitization: true
 
 ### Pixel Sort
 
-``` javascript 1
+```javascript
 <canvas id="pixel_sort"></canvas>
 
 <script type="module">
@@ -149,7 +149,7 @@ disable_html_sanitization: true
    // Create a new image 
    const img = new Image () 
 
-   // Run new image once the image has successfully loaded its resource
+   // Run new image once the image has successfully loaded 
    img.onload = () => {
       // Adjusts the canvas height based on the image's aspect ratio
       cnv.height = cnv.width * (img.height / img.width)
@@ -168,7 +168,9 @@ disable_html_sanitization: true
    // Define a draw_frame function
    const draw_frame = () => {
 
-      ctx.drawImage (img, 0, 0, cnv.width, cnv.height)
+      // Draw the image 
+      //(image, dx, dy, dWidth, dHeight)
+      ctx.drawImage (img, 0, 0, cnv.width, cnv.height) 
 
       let sig = Math.cos (frame_count * 2 * Math.PI / 500)
 
