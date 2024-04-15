@@ -156,7 +156,7 @@ disable_html_sanitization: true
       // Call the draw function with the new image as the argument 
       // draw the image to the canvas
       ctx.drawImage (img, 0, 0, cnv.width, cnv.height)
-      // 
+      // Call the innit fuction of the sorter
       sorter.init ()
       // Call the draw_frame function
       draw_frame ()
@@ -189,6 +189,7 @@ disable_html_sanitization: true
          y: Math.floor (mid.y - (dim.y / 2))
       }
 
+      // Call the glitch function of the sorter
       sorter.glitch (pos, dim)
 
       frame_count++
@@ -202,14 +203,21 @@ disable_html_sanitization: true
 ```classjs
 // pixel_sort.js
 
+// Define a quicksort function with 'a' as the parameter
 const quicksort = a => {
+   // 
    if (a.length <= 1) return a
 
+   // Take the first element of the array 'a' as the pivot
    let pivot = a[0]
+   // Create an empty left array
    let left = []
+   // Create an empty right array
    let right = []
 
+   // Iterate through the remaining elements of the array (exclude the first element)
    for (let i = 1; i < a.length; i++) {
+      // 
       if (a[i].br < pivot.br) left.push (a[i])
       else right.push (a[i])
    }
