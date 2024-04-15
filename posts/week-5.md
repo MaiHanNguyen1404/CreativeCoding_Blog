@@ -111,8 +111,8 @@ disable_html_sanitization: true
         // } else {
         //     prob = 0.02;
         // }
-      // Probability if is_glitching is true: 5% - currently display the glitched image
-      // Probability if is_glitching is false: 2% - currently display the original image
+      //Probability if is_glitching is true: 5% - currently display the glitched image
+      //Probability if is_glitching is false: 2% - currently display the original image
       const prob = is_glitching ? 0.05 : 0.02
       // If a random number between 0 to 1 (< 1) is less than the probability
       if (Math.random () < prob) {
