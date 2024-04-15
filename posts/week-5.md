@@ -133,7 +133,6 @@ disable_html_sanitization: true
 ### Pixel Sort
 
 ``` javascript 1
-
 <canvas id="pixel_sort"></canvas>
 
 <script type="module">
