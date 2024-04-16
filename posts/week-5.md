@@ -298,6 +298,7 @@ export class PixelSorter {
 
          const sorted = quicksort (unsorted).reverse ()
 
+         // Create an empty rgba array
          let rgba = []
 
          sorted.forEach (e => {
