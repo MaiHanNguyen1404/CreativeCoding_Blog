@@ -256,21 +256,27 @@ export class PixelSorter {
    // defines the area within the image to be sorted
    glitch (pos, dim) {
       // Define find_i function with c as the argument
-      // 
+      // to calculate the corresponding index in the image data array,
+      // based on the x and y coordinates of a pixel within the canvas
       const find_i = c => ((c.y * this.ctx.canvas.width) + c.x) * 4 
+      // 4 represent red, green, blue, and alpha
 
       // Iterate through each horizontal line (x) within the dimesion (in the argument)
       for (let x_off = 0; x_off < dim.x; x_off++) {
          // Create an empty positions array
          const positions = []
 
-         // Iterate through each vertical line (y) within the position (in the argument)
+         // Iterate through each vertical line (y) within the dimesion (in the argument)
          for (let y_pos = pos.y; y_pos < pos.y + dim.y; y_pos++) {
+            // Use the find_i function to calculate the index of the pixel at the current position  
+            // then push to the positions array 
             positions.push (find_i ({ x: pos.x + x_off, y: y_pos }))
          }
 
+         // Create an empty unsorted array
          const unsorted = []
 
+         // Iterate through the positions array 
          positions.forEach (p => {
             // Red value 
             const r = this.img_data[p]
