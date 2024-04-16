@@ -205,7 +205,7 @@ disable_html_sanitization: true
 
 // Define a quicksort function with 'a' as the parameter
 const quicksort = a => {
-   // 
+   // If array 'a' length reaches 1, return the original array length
    if (a.length <= 1) return a
 
    // Take the first element of the array 'a' as the pivot element 
@@ -241,15 +241,20 @@ export class PixelSorter {
       this.ctx = ctx
    }
 
-   // Define init function 
+   // Define function for initialize
    init () {
       this.width = this.ctx.canvas.width
       this.height = this.ctx.canvas.height
+      // Method getImageData() returns an ImageData object 
+      // representing the underlying pixel data for a specified portion of the canvas
+      // Store the image data on the canvas in img_data
       this.img_data = this.ctx.getImageData (0, 0, this.width, this.height).data
    }
 
-
+   // Define function for the glitch effect 
+   // using position and dimesion as the arguments
    glitch (pos, dim) {
+      // Define find_i function 
       const find_i = c => ((c.y * this.ctx.canvas.width) + c.x) * 4 
 
       for (let x_off = 0; x_off < dim.x; x_off++) {
@@ -262,6 +267,7 @@ export class PixelSorter {
          const unsorted = []
 
          positions.forEach (p => {
+            // Red value 
             const r = this.img_data[p]
             const g = this.img_data[p + 1]
             const b = this.img_data[p + 2]
