@@ -296,20 +296,30 @@ export class PixelSorter {
             unsorted.push ({ r, g, b, a, br })
          })
 
+         // Using the quicksort funtcion to sort the unsorted array
+         // then reverses the order of elements
          const sorted = quicksort (unsorted).reverse ()
 
          // Create an empty rgba array
          let rgba = []
 
+         // Iterate over each element (e) in the sorted array
          sorted.forEach (e => {
+            // Push these extracted values (from e) 
+            // in correct order red, green, blue, alpha to the rgba array
             rgba.push (e.r)
             rgba.push (e.g)
             rgba.push (e.b)
             rgba.push (e.a)
          })
 
+         // Uint8ClampedArray: Each element in the typed array 
+         // represents a single color channel value (red, green, blue, or alpha) 
+         // and is clamped to a valid range (0-255
+         // Convert the rgba array into a proper image data storing array
          rgba = new Uint8ClampedArray (rgba)
 
+         
          const new_data = this.ctx.createImageData (1, dim.y)
          
          new_data.data.set (rgba)
@@ -320,4 +330,6 @@ export class PixelSorter {
 }
 
 ```
+
+## 2. Glitch potrait
 
