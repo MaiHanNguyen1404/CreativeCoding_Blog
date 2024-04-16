@@ -277,7 +277,8 @@ export class PixelSorter {
 
          // Iterate through each vertical line (y) within the dimesion (in the argument)
          for (let y_pos = pos.y; y_pos < pos.y + dim.y; y_pos++) {
-            // Use the find_i function to calculate the index of the pixel at the current position  
+            // Use the find_i function 
+            // to calculate the index of the pixel at the current position  
             // then push to the positions array 
             positions.push (find_i ({ x: pos.x + x_off, y: y_pos }))
          }
