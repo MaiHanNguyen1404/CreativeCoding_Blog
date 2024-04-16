@@ -342,3 +342,5 @@ Takes the sorted pixel information, converts it into a format suitable for image
 
 ## 2. Glitch potrait
 
+Self-portrait in the style of glitch link: 
+
