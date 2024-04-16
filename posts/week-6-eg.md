@@ -5,6 +5,6 @@ snippet: This blog is about Week 5 Homework.
 disable_html_sanitization: true
 ---
 
-<script src="/script/c2.min.js"></script>
+<script src="/scripts/c2.min.js"></script>
 
 <canvas id='c2'/>
