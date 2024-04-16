@@ -172,8 +172,12 @@ disable_html_sanitization: true
       //(image, dx, dy, dWidth, dHeight)
       ctx.drawImage (img, 0, 0, cnv.width, cnv.height) 
 
+      // Math.cos returns a value oscillates between -1 and 1
+      // Oscillates back and forth as the frame_count increases, creating a wave-like pattern
+      // Create a sig value for shimmering (wave) effect
       let sig = Math.cos (frame_count * 2 * Math.PI / 500)
 
+      // Variable to indicate the center of the canvas
       const mid = {
          x: cnv.width / 2,
          y: cnv.height / 2
@@ -192,6 +196,7 @@ disable_html_sanitization: true
       // Call the glitch function of the sorter
       sorter.glitch (pos, dim)
 
+      // Increments the frame counter for animation
       frame_count++
       requestAnimationFrame (draw_frame)
    }
