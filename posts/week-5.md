@@ -183,11 +183,15 @@ disable_html_sanitization: true
          y: cnv.height / 2
       }
 
+      // Dimesions of the pixel sorting area
+      // based on the sig value and the canvas size
       const dim = {
          x: Math.floor ((sig + 3) * (cnv.width / 6)) + 1,
          y: Math.floor ((sig + 1) * (cnv.height / 6)) + 1
       }
 
+      // Position of the pixel sorting area
+      // relative to the center of the canvas 
       const pos = {
          x: Math.floor (mid.x - (dim.x / 2)),
          y: Math.floor (mid.y - (dim.y / 2))
