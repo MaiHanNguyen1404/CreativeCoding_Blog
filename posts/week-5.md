@@ -319,17 +319,25 @@ export class PixelSorter {
          // Convert the rgba array into a proper image data storing array
          rgba = new Uint8ClampedArray (rgba)
 
-         
+         // Create new image data using the canvas context
+         // width = 1px, 
+         // height = dim.y
+         // Create a blank image buffer within the specified dimensions
          const new_data = this.ctx.createImageData (1, dim.y)
          
+         // Set the data property of new_data
+         // using the set method to copy the content of rgba into the new_data
          new_data.data.set (rgba)
 
+         // Draw the new_data object
          this.ctx.putImageData (new_data, pos.x + x_off, pos.y)
       }
    }
 }
 
 ```
+
+Takes the sorted pixel information, converts it into a format suitable for image data manipulation, creates a new image buffer with the sorted data, and then draws it as a vertical strip onto the canvas at the defined position. This process is repeated for each horizontal line within the specified dimensions, creating the overall pixel sorting glitch effect.
 
 ## 2. Glitch potrait
 
