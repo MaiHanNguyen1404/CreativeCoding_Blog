@@ -217,14 +217,14 @@ const quicksort = a => {
 
    // Iterate through the remaining elements of the array (exclude the first element)
    for (let i = 1; i < a.length; i++) {
-      // If the current element's (a[i]) brightness (br)  is less than the pivot's, 
+      // If the current element's brightness (a[i].br) is less than the pivot's, 
       // push the element to the left array
       if (a[i].br < pivot.br) left.push (a[i])
       // Otherwise, push the element to the right array
       else right.push (a[i])
    }
 
-   // ... means Spread Operators to to spread array values or iterables into an array
+   // ()... means Spread Operators to to spread array values or iterables into an array)
    // Create a sorted array 
    // with result of recursively sorting the left array, 
    // the original pivot element (a[0]),
@@ -252,14 +252,19 @@ export class PixelSorter {
    }
 
    // Define function for the glitch effect 
-   // using position and dimesion as the arguments
+   // using position and dimesion as the arguments 
+   // defines the area within the image to be sorted
    glitch (pos, dim) {
-      // Define find_i function 
+      // Define find_i function with c as the argument
+      // 
       const find_i = c => ((c.y * this.ctx.canvas.width) + c.x) * 4 
 
+      // Iterate through each horizontal line (x) within the dimesion (in the argument)
       for (let x_off = 0; x_off < dim.x; x_off++) {
+         // Create an empty positions array
          const positions = []
 
+         // Iterate through each vertical line (y) within the position (in the argument)
          for (let y_pos = pos.y; y_pos < pos.y + dim.y; y_pos++) {
             positions.push (find_i ({ x: pos.x + x_off, y: y_pos }))
          }
