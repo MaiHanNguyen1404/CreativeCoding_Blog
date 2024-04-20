@@ -1,7 +1,7 @@
 ---
 title: Week 5 Blog
 published_at: 2024-04-16
-snippet: Week 5 Homework: 1. Add explanatory comments
+snippet: Week 5 Homework - Add explanatory comments
 disable_html_sanitization: true
 ---
 
@@ -263,7 +263,7 @@ disable_html_sanitization: true
       draw_frame ()
    }
 
-   img.src = `/240408/kornerpark.jpg`
+   img.src = `/w05/glitch.JPG`
 
    let frame_count = 0
    const draw_frame = () => {
@@ -326,7 +326,7 @@ disable_html_sanitization: true
       draw_frame ()
    }
 
-   img.src = `/240408/kornerpark.jpg` // The image source
+   img.src = `/w05/glitch.JPG` // The image source
 
    let frame_count = 0
    // Define a draw_frame function
