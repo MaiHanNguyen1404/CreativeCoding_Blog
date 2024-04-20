@@ -1,5 +1,5 @@
 ---
-title: Week 5 Blog
+title: Week 5.1 Blog
 published_at: 2024-04-16
 snippet: Week 5 Homework - Add explanatory comments
 disable_html_sanitization: true
@@ -504,7 +504,4 @@ export class PixelSorter {
 
 Takes the sorted pixel information, converts it into a format suitable for image data manipulation, creates a new image buffer with the sorted data, and then draws it as a vertical strip onto the canvas at the defined position. This process is repeated for each horizontal line within the specified dimensions, creating the overall pixel sorting glitch effect.
 
-## 2. Glitch potrait
-
-Glitch potrait link: 
 
