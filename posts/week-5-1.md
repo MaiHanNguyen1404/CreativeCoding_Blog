@@ -94,7 +94,7 @@ disable_html_sanitization: true
    // Getting canvas context
    const ctx = cnv.getContext (`2d`)
 
-   // Instatiating variable fro the image data
+   // Instatiating variable for the image data
    let img_data
 
     // Define a function to draw an image to the canvas 
@@ -129,7 +129,7 @@ disable_html_sanitization: true
 
    // The image source 
    // Happen first then the onload block execute
-   img.src = `/240405/pfp_glasses.jpg` 
+   img.src = `/w05/glitch.JPG` 
 
    // Define a function to generate random integer 
    // within the maximum range (0 to max, excluding max)
@@ -189,7 +189,7 @@ disable_html_sanitization: true
          else draw_frame () 
       }
 
-      // Give the new image some glitchtified image date
+      // Give the new image some glitchtified image data
       i.src = glitchify (img_data, 96, 6)
    }
 
@@ -307,28 +307,36 @@ disable_html_sanitization: true
    cnv.height = cnv.width * 9 / 16 // 16:9 aspect ratio
 
    const ctx = cnv.getContext (`2d`)
+
    // Creates an instance of a PixelSorter class with context as a parameter
    const sorter = new PixelSorter (ctx) 
 
-   // Create a new image 
+   // Create a new image element
    const img = new Image () 
 
-   // Run new image once the image has successfully loaded 
+   // Define a function to run new image once the image has loaded its data
    img.onload = () => {
-      // Adjusts the canvas height based on the image's aspect ratio
+
+      // Adjusts the canvas height 
+      // based on the image's aspect ratio
       cnv.height = cnv.width * (img.height / img.width)
+
       // Call the draw function with the new image as the argument 
       // draw the image to the canvas
       ctx.drawImage (img, 0, 0, cnv.width, cnv.height)
+
       // Call the innit fuction of the sorter
       sorter.init ()
+
       // Call the draw_frame function
       draw_frame ()
    }
 
-   img.src = `/w05/glitch.JPG` // The image source
+   // The image source
+   img.src = `/w05/glitch.JPG` 
 
    let frame_count = 0
+
    // Define a draw_frame function
    const draw_frame = () => {
 
@@ -378,21 +386,27 @@ disable_html_sanitization: true
 
 // Define a quicksort function with 'a' as the parameter
 const quicksort = a => {
+
    // If array 'a' length reaches 1, return the original array length
    if (a.length <= 1) return a
 
    // Take the first element of the array 'a' as the pivot element 
    let pivot = a[0]
+
    // Create an empty left array
    let left = []
+
    // Create an empty right array
    let right = []
 
-   // Iterate through the remaining elements of the array (exclude the first element)
+   // Iterate through the remaining elements of the array 
+   // exclude the first element
    for (let i = 1; i < a.length; i++) {
+
       // If the current element's brightness (a[i].br) is less than the pivot's, 
       // push the element to the left array
       if (a[i].br < pivot.br) left.push (a[i])
+
       // Otherwise, push the element to the right array
       else right.push (a[i])
    }
@@ -404,7 +418,8 @@ const quicksort = a => {
    // and result of recursively sorting the right array 
    const sorted = [ ...quicksort (left), pivot, ...quicksort (right) ]
 
-   // Return the sorted array (in descending order based on the brightness value)
+   // Return the sorted array 
+   // in descending order based on the brightness value
    return sorted
 }
 
@@ -416,8 +431,12 @@ export class PixelSorter {
 
    // Define function for initialize
    init () {
+
+      // Set the initial size
+      // based on the canvas size
       this.width = this.ctx.canvas.width
       this.height = this.ctx.canvas.height
+
       // Method getImageData() returns an ImageData object 
       // representing the underlying pixel data for a specified portion of the canvas
       // Store the image data on the canvas in img_data
@@ -426,8 +445,9 @@ export class PixelSorter {
 
    // Define function for the glitch effect 
    // using position and dimesion as the arguments 
-   // defines the area within the image to be sorted
+   // defining the area within the image to be sorted
    glitch (pos, dim) {
+
       // Define find_i function with c as the argument
       // to calculate the corresponding index in the image data array,
       // based on the x and y coordinates of a pixel within the canvas
@@ -436,11 +456,13 @@ export class PixelSorter {
 
       // Iterate through each horizontal line (x) within the dimesion (in the argument)
       for (let x_off = 0; x_off < dim.x; x_off++) {
+
          // Create an empty positions array
          const positions = []
 
          // Iterate through each vertical line (y) within the dimesion (in the argument)
          for (let y_pos = pos.y; y_pos < pos.y + dim.y; y_pos++) {
+
             // Use the find_i function 
             // to calculate the index of the pixel at the current position  
             // then push to the positions array 
@@ -452,12 +474,23 @@ export class PixelSorter {
 
          // Iterate through the positions array 
          positions.forEach (p => {
+
             // Red value 
             const r = this.img_data[p]
+
+            // Green value
             const g = this.img_data[p + 1]
+
+            // Blue value
             const b = this.img_data[p + 2]
+
+            // Alpha value
             const a = this.img_data[p + 3]
+
+            // Brightness value
             const br = r * g * b
+
+            // Push RGBA and Brightness value to the unsorted array
             unsorted.push ({ r, g, b, a, br })
          })
 
