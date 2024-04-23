@@ -17,6 +17,7 @@ disable_html_sanitization: true
    const height = width * 9 / 16
 
    //  Instanced Buffer Geomety
+   // from https://codepen.io/prisoner849/pen/REyzJV
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(60, 1, 1, 1000);
     camera.position.set(0, 0, 5);
