@@ -11,4 +11,6 @@ disable_html_sanitization: true
 
 Glitch portrait link: 
 
+- Size problem
+
 

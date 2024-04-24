@@ -4,133 +4,188 @@ published_at: 2024-04-23
 snippet: Week 6 Homework - Three.js
 disable_html_sanitization: true
 ---
+Code inspired from [this code pen](https://hofk.de/main/discourse.threejs/2023/TwistedTorusParametric/TwistedTorusParametric.html)
 
 <div id="three_container"></div>
 
-<script id="three_script" type="module"> 
-   import * as THREE from "/scripts/three/three.module.js"
-   import { OrbitControls } from "/scripts/three/OrbitControls.js"
-   
-   const div = document.getElementById ("three_container")
+<script type="module">
 
-   const width = div.parentNode.scrollWidth
-   const height = width * 9 / 16
+// @author PavelBoytchev
 
-   //  Instanced Buffer Geomety
-   // from https://codepen.io/prisoner849/pen/REyzJV
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(60, 1, 1, 1000);
-    camera.position.set(0, 0, 5);
-    var renderer = new THREE.WebGLRenderer({
-    antialias: true
-    });
-    renderer.setClearColor(0x808080);
-    var canvas = renderer.domElement;
-    document.body.appendChild(canvas);
+import * as THREE from '/scripts/three/three.module.js';
+import { ParametricGeometry } from '/scripts/three/ParametricGeometry.js';
+import { OrbitControls } from '/scripts/three/OrbitControls.js'
 
-    var controls = new THREE.OrbitControls(camera, canvas);
+// general setup, boring, skip to the next comment
 
-    // texture
-    var tCanvas = document.createElement("canvas");
-    tCanvas.width = 128;
-    tCanvas.height = 128;
-    var tCtx = tCanvas.getContext('2d');
-    tCtx.clearRect(0, 0, tCanvas.width, tCanvas.height);
+// Adjust the canvas size 
+const div = document.getElementById (`three_container`)
+const w = div.parentNode.scrollWidth
+const h = w * 9/16
 
-    var texture = new THREE.CanvasTexture(tCanvas);
-    //var texture = new THREE.TextureLoader().load('https://threejs.org/examples/textures/UV_Grid_Sm.jpg');
-    var lineColor = new THREE.Color();
-    function drawSomething(){
-    tCtx.beginPath();
-    tCtx.moveTo(THREE.Math.randInt(0, 127), THREE.Math.randInt(0, 127));
-    tCtx.lineTo(THREE.Math.randInt(0, 127), THREE.Math.randInt(0, 127));
-    tCtx.lineWidth = THREE.Math.randInt(5, 20);
-    lineColor.set(Math.random() * 0x808080 + 0x808080);
-    tCtx.strokeStyle = lineColor.getStyle();
-    tCtx.stroke();
-    texture.needsUpdate = true;
-    }
+console.clear( );
 
-    setInterval( drawSomething, 500 );
+var scene = new THREE.Scene();
+    scene.background = new THREE.Color( 'gainsboro' );
 
-    var planeGeom = new THREE.PlaneBufferGeometry(2, 2);
+var camera = new THREE.PerspectiveCamera( 30, innerWidth/innerHeight );
+    camera.position.set( 0, 0, 25 );
+    camera.lookAt( scene.position );
 
-    var instancedGeom = new THREE.InstancedBufferGeometry();
-    instancedGeom.attributes.position = planeGeom.attributes.position;
-    instancedGeom.attributes.uv = planeGeom.attributes.uv;
-    instancedGeom.index = planeGeom.index;
+var renderer = new THREE.WebGLRenderer( {antialias: true} );
+    renderer.setSize( w, h );
+    renderer.setAnimationLoop( animationLoop );
+    div.appendChild( renderer.domElement );
+			
+// window.addEventListener( "resize", (event) => {
+//     camera.aspect = innerWidth/innerHeight;
+//     camera.updateProjectionMatrix( );
+//     renderer.setSize( innerWidth, innerHeight );
+// });
 
-    instancedGeom.addAttribute("instancePosition", new THREE.InstancedBufferAttribute( new Float32Array([-1.1, 1.1, 0, 1.1, 1.1, 0, -1.1, -1.1, 0, 1.1, -1.1, 0]), 3));
-    instancedGeom.addAttribute("instanceUv", new THREE.InstancedBufferAttribute(new Float32Array([0, 1, 1, 1, 0, 0, 1, 0]), 2));
+var controls = new OrbitControls( camera, renderer.domElement );
+    controls.enableDamping = true;
+		controls.autoRotate = true;
 
-    var material = new THREE.ShaderMaterial({
-    uniforms: {
-        texture1: { value: texture},
-        textureDivision: {value: new THREE.Vector2(2, 2)},
-        time: {value: 0}
-    },
-    vertexShader:`
-        precision highp float;
+var ambientLight = new THREE.AmbientLight( 'white', 0.5 );
+    //scene.add( ambientLight );
 
-        uniform vec2 textureDivision;
-        uniform float time;
-
-            attribute vec3 instancePosition;
-            attribute vec2 instanceUv;
-        
-            varying vec2 vUv;
-
-            void main(){
-        vec2 slices = vec2(1.0) / textureDivision;
-                vUv = slices * instanceUv + slices * uv;
-        vec3 pos = position + instancePosition;
-        pos += normalize(instancePosition) * (sin(time) * 0.5 + 0.5);
-        
-                gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
-            }
-    `,
-    fragmentShader:`
-        precision highp float;
-
-        uniform sampler2D texture1;
-        
-            varying vec2 vUv;
-
-            void main() {
-                gl_FragColor = texture2D(texture1, vUv);
-            }
-    `
-    });
-
-    var instancedMesh = new THREE.Mesh(instancedGeom, material);
-    scene.add(instancedMesh);
-
-    scene.add(new THREE.AxesHelper(0.1));
+var light = new THREE.DirectionalLight( 'white', 3 );
+    light.position.set( 1, 1, 1 );
+    scene.add( light );
 
 
-    render();
+// next comment
 
-    function render() {
-    if (resize(renderer)) {
-        camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        camera.updateProjectionMatrix();
-    }
-    material.uniforms.time.value = performance.now() / 1000;
-    renderer.render(scene, camera);
-    requestAnimationFrame(render);
-    }
+function surface( u, v, target )
+{
+		const n = 10,  // larger values make sharper square
+					t = 1.5; // larger values make more twists
+	
+		u *= 2*Math.PI;
+		v *= 2*Math.PI;
+	
+		var r = (Math.cos(v)**n + Math.sin(v)**n)**(-1/n),
+				x = (4+r*Math.cos(v+t*u)) * Math.cos(u),
+				y = (4+r*Math.cos(v+t*u)) * Math.sin(u),
+				z = r*Math.sin(v+t*u);
+	
+  	target.set( x, y, z );
+}
 
-    function resize(renderer) {
-    const canvas = renderer.domElement;
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    const needResize = canvas.width !== width || canvas.height !== height;
-    if (needResize) {
-        renderer.setSize(width, height, false);
-    }
-    return needResize;
-    }
 
+const geometry = new ParametricGeometry(surface, 100, 100);
+
+
+var object = new THREE.Mesh(
+			geometry,
+			new THREE.MeshNormalMaterial(),
+    );	
+		scene.add( object );
+
+
+
+function animationLoop( t )
+{
+   object.rotation.z = t/2700;
+
+    controls.update( );
+		light.position.copy( camera.position );
+    renderer.render( scene, camera );
+}
 
 </script>
 
+```javascript
+
+<div id="three_container"></div>
+
+<script type="module">
+
+// @author PavelBoytchev
+
+import * as THREE from '/scripts/three/three.module.js';
+import { ParametricGeometry } from '/scripts/three/ParametricGeometry.js';
+import { OrbitControls } from '/scripts/three/OrbitControls.js'
+
+// general setup, boring, skip to the next comment
+
+// Adjust the canvas size 
+const div = document.getElementById (`three_container`)
+const w = div.parentNode.scrollWidth
+const h = w * 9/16
+
+console.clear( );
+
+var scene = new THREE.Scene();
+    scene.background = new THREE.Color( 'gainsboro' );
+
+var camera = new THREE.PerspectiveCamera( 30, innerWidth/innerHeight );
+    camera.position.set( 0, 0, 25 );
+    camera.lookAt( scene.position );
+
+var renderer = new THREE.WebGLRenderer( {antialias: true} );
+    renderer.setSize( w, h );
+    renderer.setAnimationLoop( animationLoop );
+    div.appendChild( renderer.domElement );
+			
+// window.addEventListener( "resize", (event) => {
+//     camera.aspect = innerWidth/innerHeight;
+//     camera.updateProjectionMatrix( );
+//     renderer.setSize( innerWidth, innerHeight );
+// });
+
+var controls = new OrbitControls( camera, renderer.domElement );
+    controls.enableDamping = true;
+		controls.autoRotate = true;
+
+var ambientLight = new THREE.AmbientLight( 'white', 0.5 );
+    //scene.add( ambientLight );
+
+var light = new THREE.DirectionalLight( 'white', 3 );
+    light.position.set( 1, 1, 1 );
+    scene.add( light );
+
+
+// next comment
+
+function surface( u, v, target )
+{
+		const n = 10,  // larger values make sharper square
+					t = 1.5; // larger values make more twists
+	
+		u *= 2*Math.PI;
+		v *= 2*Math.PI;
+	
+		var r = (Math.cos(v)**n + Math.sin(v)**n)**(-1/n),
+				x = (4+r*Math.cos(v+t*u)) * Math.cos(u),
+				y = (4+r*Math.cos(v+t*u)) * Math.sin(u),
+				z = r*Math.sin(v+t*u);
+	
+  	target.set( x, y, z );
+}
+
+
+const geometry = new ParametricGeometry(surface, 100, 100);
+
+
+var object = new THREE.Mesh(
+			geometry,
+			new THREE.MeshNormalMaterial(),
+    );	
+		scene.add( object );
+
+
+
+function animationLoop( t )
+{
+   object.rotation.z = t/2700;
+
+    controls.update( );
+		light.position.copy( camera.position );
+    renderer.render( scene, camera );
+}
+
+</script>
+
+```
