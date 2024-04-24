@@ -96,7 +96,7 @@ function animationLoop( t )
 
 </script>
 
-```javascript
+```html
 
 <div id="three_container"></div>
 
