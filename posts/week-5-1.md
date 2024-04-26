@@ -1,6 +1,6 @@
 ---
 title: Week 5.1 Blog
-published_at: 2024-04-16
+published_at: 2024-04-15
 snippet: Week 5 Homework - 1. Add explanatory comments
 disable_html_sanitization: true
 ---
