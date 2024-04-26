@@ -1,7 +1,7 @@
 ---
 title: Week 6.2 Blog
-published_at: 2024-04-23
-snippet: Week 6 Homework - c2.js
+published_at: 2024-04-24
+snippet: Week 6 Homework - 2. c2.js
 disable_html_sanitization: true
 ---
 

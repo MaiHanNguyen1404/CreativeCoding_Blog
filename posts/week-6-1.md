@@ -1,7 +1,7 @@
 ---
 title: Week 6.1 Blog
 published_at: 2024-04-23
-snippet: Week 6 Homework - Three.js
+snippet: Week 6 Homework - 1. Three.js
 disable_html_sanitization: true
 ---
 Code inspired from [this code pen](https://hofk.de/main/discourse.threejs/2023/TwistedTorusParametric/TwistedTorusParametric.html)
