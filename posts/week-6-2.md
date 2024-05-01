@@ -5,7 +5,7 @@ snippet: Week 6 Homework - 2. c2.js
 disable_html_sanitization: true
 ---
 
-## Chromosome 4
+## 2. C2.js library
 
 <script src="/scripts/c2/c2.min.js"></script>
 

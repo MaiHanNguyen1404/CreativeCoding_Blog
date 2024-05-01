@@ -536,3 +536,6 @@ export class PixelSorter {
 ```
 
 Takes the sorted pixel information, converts it into a format suitable for image data manipulation, creates a new image buffer with the sorted data, and then draws it as a vertical strip onto the canvas at the defined position. This process is repeated for each horizontal line within the specified dimensions, creating the overall pixel sorting glitch effect.
+<p>
+<br>
+<p>
