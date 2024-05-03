@@ -66,9 +66,9 @@ drawBranch (200)
 
 ```
 
-At first, I was a little unfamiliar with Canvas API, so I needed some time to read through the resources and watch the tutorials from Coding Train about recursion. ![W4_homework](w04/tutorial.png) 
+At first, I was a little unfamiliar with Canvas API, so I needed some time to read through the resources and watch the tutorials from Coding Train about recursion. ![W4_homework](w04/tutorial.png) [The coding train: Recursion](https://thecodingtrain.com/tracks/algorithmic-botany)
 
-The vector way of creating a fractal tree in the Examples was a bit confusing for me, therefore, I tried to recreate it in a simpler approach which I learned from this tutorial. ![W4_homework](w04/tut2.png) 
+The vector way of creating a fractal tree in the Examples was a bit confusing for me, therefore, I tried to recreate it in a simpler approach which I learned from this tutorial. ![W4_homework](w04/tut2.png)[Franks Laboratory: Fractals](https://www.youtube.com/watch?v=dQKYao-daYw)
 
 First, I followed the tutorial to understand what recursion is and the approach to drawing a fractal. 
 <p float="center">
