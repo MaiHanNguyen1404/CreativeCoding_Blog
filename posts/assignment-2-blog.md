@@ -75,6 +75,29 @@ As I put the class back in the original file, it did work well.
   <img src="/w08/class_sol2.png" width="45%"/>
 </p>
 
+Then to draw the growing animation from the root of the trail, I created some variables to move their positions based on their size (bigger as they move) until they reach a certain maximum size. At first it did not create a smooth trail as I thought, because the code only executed once. So to draw the segment continously until it reach the maximum size, I added the requestAnimationFrame.
+<p float="center">
+  <img src="/w08/without_request.png" width="30%"/>
+  <img src="/w08/with_request1.png" width="30%"/>
+  <img src="/w08/with_request2.png" width="30%"/>
+</p>
+
+At first, I tested to see if the trail work by using simple square trail, then I changed it with the letter trails. I researched for some tutorial on adding typography to web API on [Tutorials Point website](https://www.tutorialspoint.com/How-to-set-the-font-family-for-text-with-JavaScript) and [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font).
+<p float="center">
+  <img src="/w08/typotut_1.png" width="45%"/>
+  <img src="/w08/typotut_2.png" width="45%"/>
+</p>
+
+I also asked Gemini (Google AI) for some suggestion of some typography properties in Javascript. I gave me some more idea about displaying random letter from an array.
+<p float="center">
+  <img src="/w08/typo_sol1.png" width="45%"/>
+  <img src="/w08/typo_sol2.png" width="45%"/>
+</p>
+<p float="center">
+  <img src="/w08/typo_sol3.png" width="45%"/>
+  <img src="/w08/typo_sol4.png" width="45%"/>
+</p>
+
 
 
 
