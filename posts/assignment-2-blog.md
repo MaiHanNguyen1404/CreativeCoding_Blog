@@ -143,7 +143,23 @@ Before incorporate the audio synthesis into the sketch, first I put the code in 
 
 I combined the code to my sketch. In the audio code, when the cursor move on canvas there is different period of time between each note, therefore, I thought of making the second letter trails appear base on the period value. For that to work, I put the  period value in the argument of the sprout function, then using the recursive function to call itself again according to period of times between each note. 
 
-The color of the shadow is the same with the background to giving the illusion of ‘erasing’ the screen with the white words.
+*The sprout function call itself again after a period of time between each note using the setTimeOut function:* 
+<p float="center">
+  <img src="/w08/recursive3.png" width="45%"/>
+  <img src="/w08/recursive4.png" width="45%"/>
+</p>
+
+The color of the shadow is the same with the background to giving the illusion of ‘erasing’ the screen with the white words. 
+<p float="center">
+  <img src="/w08/shadow.png" width="90%"/>
+</p>
+
+*Final visual of the sketch when move the cursor over the canvas and after click on the canvas*
+<p float="center">
+  <img src="/w08/move.png" width="45%"/>
+  <img src="/w08/click.png" width="45%"/>
+</p>
+
 
 
 
