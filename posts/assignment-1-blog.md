@@ -10,6 +10,7 @@ disable_html_sanitization: true
 ## Research and Definition
 
 ### The Cute aesthetic
+
 From this week's reading about Sianne Ngai’s Zany, Cute, Interesting, and some more articles, the definition of ‘cute’ aesthetic, in my opinion, is the desire to become intimate through the act of vulnerability. The cute evokes feeling through its vulnerable, diminutive form and tempting for special care. Its powerlessness can be extremely seductive (Wark 2020). The cute production could be seen as capitalism itself, an obvious example is the Kawaii culture of cuteness in Japan's post-war period through the mass production of toys, manga, and ephemera. 
 <p float="center">
   <img src="/w03/kawaii1.png" width="45%" />
