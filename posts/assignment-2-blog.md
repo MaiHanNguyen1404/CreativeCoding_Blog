@@ -160,7 +160,7 @@ The color of the shadow is the same with the background to giving the illusion o
   <img src="/w08/click.png" width="45%"/>
 </p>
 
-[Click Final Sketch](https://chaotic-project.deno.dev/)
+['Click' Final Sketch](https://chaotic-project.deno.dev/)
 
 <p>
 <br>
