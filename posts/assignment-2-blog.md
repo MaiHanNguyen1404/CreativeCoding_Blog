@@ -180,5 +180,3 @@ The color of the shadow is the same with the background to giving the illusion o
 
 
 
-
-
