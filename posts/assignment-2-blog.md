@@ -98,6 +98,57 @@ I also asked Gemini (Google AI) for some suggestion of some typography propertie
   <img src="/w08/typo_sol4.png" width="45%"/>
 </p>
 
+The interaction of viewer to the website was added using the 'mouse' function of Javascript. I found out more about this function and how it works through [MDN Web Doc](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event). I used the 'mousemove' function for the first letter trails, which contains the word 'click'. The 'mouseup' and 'mousedown' function was used for the second trails and the music note since the audio context need a pause elements. 
+<p float="center">
+  <img src="/w08/mouse_tut.png" width="45%"/>
+  <img src="/w08/mouse_function.png" width="45%"/>
+</p>
+
+After creating the first growing animation for the letter trails, I decided to test out different values (like shadow, color choice, blend mode, etc.) to the sketch.
+
+*The sketch without the angle variations:*
+<p float="center">
+  <img src="/w08/withoutangle_1.png" width="45%"/>
+  <img src="/w08/withoutangle_2.png" width="45%"/>
+</p>
+
+*With angle variations within the trails:*
+<p float="center">
+  <img src="/w08/withangle_1.png" width="45%"/>
+  <img src="/w08/withangle_2.png" width="45%"/>
+</p>
+
+*Different colors, shadow and blend mode (globalCompositeOperation) values:*
+<p float="center">
+  <img src="/w08/var1.png" width="45%"/>
+  <img src="/w08/var2.png" width="45%"/>
+</p>
+<p float="center">
+  <img src="/w08/var3.png" width="45%"/>
+  <img src="/w08/var4.png" width="45%"/>
+</p>
+<p float="center">
+  <img src="/w08/var5.png" width="90%"/>
+</p>
+
+For the second letter trails animation (sprout animation), after some test, I decided to try using a recursion function. First it turn out to be static and quite predictable, which is a round curve. 
+<p float="center">
+  <img src="/w08/recursive1.png" width="45%"/>
+  <img src="/w08/recursive2.png" width="45%"/>
+</p>
+
+I was inspried by [this Transient Synths code in the lecture blog](https://blog.science.family/240320_web_audio_api_synths), which I think also fit with my 'trails' concept. I thought of how to incorporate sound and create the interaction between sound and visual, so I decided to add the Transient Synths to my sketch while changing some value to match the visual.
+
+Before incorporate the audio synthesis into the sketch, first I put the code in separate file to see if it works on a whole canvas inner width and height, which came a promblem that all the notes came in together with first click. However, after adding the mouse up and down events, and put the 'running' state to the right events, the code works normally. ![ams2_process](w08/audiotrial.png)
+
+I combined the code to my sketch. In the audio code, when the cursor move on canvas there is different period of time between each note, therefore, I thought of making the second letter trails appear base on the period value. For that to work, I put the  period value in the argument of the sprout function, then using the recursive function to call itself again according to period of times between each note. 
+
+The color of the shadow is the same with the background to giving the illusion of ‘erasing’ the screen with the white words.
+
+
+
+
+
 
 
 
