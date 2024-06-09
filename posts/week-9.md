@@ -49,12 +49,13 @@ Family (cousins from 5-7 years old)
 
 - Shared values: active learning, creating meaningful time together (learning while playing)
 
-- Existing repertoire: watching education show on Youtube together, however, not very effective since it only offers passive learning; doing learning activity together (toy blocks, etc.)
+- Existing repertoire: watching education show on Youtube together, however, not very effective since it only offers passive learning; doing learning activity together (toy blocks, play piano, etc.)
 
 - How I might broker this repertoire using creative coding:
-    - Creating interactive website for them to learn about computure
+    - Creating interactive website for them to learn about computer
     - Use the webcam to draw on screen
     - Use colour tracking code for the kids to learn about colour while moving around
+    - Interact with audio synthezier to learn about musical note
 
 <p>
 <br>
