@@ -1,7 +1,7 @@
 ---
 title: Week 9 Blog
 published_at: 2024-05-21
-snippet: Week 9 Homework - Discussion and Brainstorm
+snippet: Week 9 Homework - Mycelial Creativity and Brainstorm
 disable_html_sanitization: true
 ---
 
@@ -29,7 +29,7 @@ The interesting value of this project for me is discovering a new communication 
 
 **Community of Practice 1:** 
 
-Alternative Photographic Processes students
+*Alternative Photographic Processes students*
 
 - Domain: share interested in photographic processes, specifically GLitch aesthetic
 
@@ -43,7 +43,7 @@ Alternative Photographic Processes students
 
 **Community of Practice 2:** 
 
-Family (cousins from 5-7 years old)
+*Family (cousins from 5-7 years old)*
 
 - Domain: same background (grow up in the same house), share interested in education
 
