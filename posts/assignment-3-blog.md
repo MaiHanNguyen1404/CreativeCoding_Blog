@@ -17,7 +17,7 @@ I think, to achieve the Interesting aesthetic, is to exhibit boredom through the
 
 ## Ideation
 
-My cousins (5-8 years old), who are the core group I focus on as the domain for the Community of Practice, primarily learn about music through passive methods like Youtube songs and shows. While this offers some good content, it lacks interaction for kids and therefore, reduces engagement and their learning efficiency. 
+My 6-year-old cousin, who is the core group I focus on as the domain for the Community of Practice, primarily learn about music through passive methods like Youtube songs and shows. While this offers some good content, it lacks interaction for kids and therefore, reduces engagement and their learning efficiency. 
 
 As discussed in the video, my project aims to address this by creating an interactive website. This website will teach musical notes in an engaging way through activities that incorporate body movement.
 
